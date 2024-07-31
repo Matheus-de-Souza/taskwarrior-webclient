@@ -49,6 +49,7 @@ const onKeyDown = (e: KeyboardEvent) => {
     }
     else if (key === 'c') {
       shell?.setCommand('')
+      input.value = ''
     }
   }
 
@@ -94,7 +95,7 @@ defineExpose({ focus })
 
 <template>
   <label for="prompt" class="flex-shrink" />
-  <div class="flex flex-row space-x-2">
+  <div class="flex flex-row">
     <Ps1 />
     <input
       id="prompt"

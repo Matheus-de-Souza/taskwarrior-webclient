@@ -1,66 +1,25 @@
-# Terminal.me
+# Taskwarrior Webclient
 
-A terminal style website. The [Nuxt3](https://v3.nuxtjs.org/) version of [m4tt72/terminal](https://github.com/m4tt72/terminal).
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/32745146/198423735-d7615739-6317-4871-ba41-ddf139f7c0d7.png" alt="me.kurtstories.com" width="800" />
-</p>
-
-## Motivation
-
-- Unix-like amateur
-- Frontend/Web enthusiast
-- Vue/Nuxt fan
-- Open source lover
-
-*That's it!*
+A webclient for [Taskwarrior](https://taskwarrior.org). The project based on [terminal.me](https://github.com/kurt-liao/terminal.me) and [m4tt72/terminal](https://github.com/m4tt72/terminal).
 
 ## Quick Start
-
-First of all, give it a star, please😁. Then, fork this repo.
-
-### Usging npm/yarn/pnpm
 
 1. Install dependencies:
 
 ```sh
-npm i
-
-# or
-
-yarn
-
-# or
-
-pnpm i --shamefully-hoist
+npm install
 ```
 
 2. Running in dev
 
 ```sh
 npm run dev
-
-# or
-
-yarn dev
-
-# or
-
-pnpm run dev
 ```
 
 3. Build the project
 
 ```sh
 npm run build
-
-# or
-
-yarn build
-
-# or
-
-pnpm run build
 ```
 
 > The output files will be in `.output` folder.
@@ -69,14 +28,6 @@ pnpm run build
 
 ```sh
 npm run preview
-
-# or 
-
-yarn preview
-
-# or
-
-pnpm run preview
 
 # or
 
@@ -92,6 +43,7 @@ I put all config in [/assets/config.json](/assets/config.json). You can modify i
 All available themes defined in [/assets/themes.json](/assets/themes.json).
 
 Themes color reference from [here](https://gogh-co.github.io/Gogh/).
+
 ## Contributing
 
 Any of contribution(PR, Issue...) is welcome.

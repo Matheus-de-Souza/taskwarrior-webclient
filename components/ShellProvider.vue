@@ -59,19 +59,19 @@ const execCommand = async () => {
     default: {
       if (!Object.keys(cmd).includes(_cmd)) {
         setHistory(
-          `Command not found: ${_cmd}. Try 'man' to get started.`,
+          `Command not found: ${_cmd}. Try 'help' to get started.`,
           true,
         )
+        break
       }
-      else {
-        try {
-          const output = await cmd[_cmd](args)
+    
+      try {
+        const output = await cmd[_cmd](args)
 
-          setHistory(output, false)
-        }
-        catch (error: any) {
-          setHistory(`Exception occured: ${error.message}`, true)
-        }
+        setHistory(output, false)
+      }
+      catch (error: any) {
+        setHistory(`Exception occured: ${error.message}`, true)
       }
       break
     }
@@ -84,7 +84,7 @@ watchEffect(() => {
 })
 
 watchEffect(() => {
-  setCommand('hello')
+  setCommand('help')
 })
 
 provide<ShellContext>(

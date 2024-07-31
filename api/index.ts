@@ -1,17 +1,19 @@
 import axios from 'axios'
 import config from '~/assets/config.json'
 
-export const getProfile = async () => {
-  const { data } = await axios.get(`${config.profileUrl}`)
+export const getRepo = async () => {
+  const { data } = await axios.get(`${config.repoUrl}`)
   return data
 }
 
-export const getStats = async () => {
-  const { data } = await axios.get(`${config.statsUrl}`)
-  return data
-}
-
-export const getRecentPosts = async () => {
-  const { data } = await axios.get(`${config.postsUrl}`)
+export const sendTaskwarriorCmd = async (args) => {
+  const { data } = await axios.post(
+    `${config.hostServer}/cmd`,
+    args.join(' '), {
+      headers: {
+        'api-key': config.apikey,
+      }
+    }
+  );
   return data
 }

@@ -10,6 +10,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   build: {
     postcss: {
       postcssOptions: {
@@ -20,6 +21,8 @@ export default defineNuxtConfig({
       },
     },
   },
+
   modules: ['@nuxtjs/tailwindcss'],
   css: ['~/assets/styles/index.css'],
+  compatibilityDate: '2024-07-29',
 })
